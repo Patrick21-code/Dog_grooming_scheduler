@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pawfection Palace - Admin Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="logo">
+                <img src="../images/owner-removebg-preview.png" alt="Pawfection Palace Logo">
+                <h1>Pat the Dog</h1>
+            </div>
+            <nav class="admin-nav">
+                <ul>
+                    <li class="active" data-section="customers">Customers</li>
+                    <li data-section="requests">Requests Queue</li>
+                    <li data-section="pets">Pet Profiles</li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <section id="customers" class="active-section">
+                <h2>Customer Management</h2>
+                <div class="search-bar">
+                    <input type="text" id="customer-search" placeholder="Search customers...">
+                </div>
+                <div id="customer-list" class="data-list">
+                    <!-- Customers will be dynamically added here -->
+                </div>
+            </section>
+
+            <section id="requests" class="hidden-section">
+                <h2>Service Requests Queue</h2>
+                <div id="request-queue" class="data-list">
+                    <!-- Requests will be dynamically added here -->
+                </div>
+            </section>
+
+            <section id="pets" class="hidden-section">
+                <h2>Pet Profiles</h2>
+                <div class="search-bar">
+                    <input type="text" id="pet-search" placeholder="Search pets...">
+                </div>
+                <div id="pet-list" class="data-list">
+                    <!-- Pet profiles will be dynamically added here -->
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div id="modal-details"></div>
+        </div>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>

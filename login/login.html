@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pawfection Palace - Login</title>
+
+    <link rel="stylesheet" href="login.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="left-bar">
+        <h1>Pawfection Palace</h1>
+        <div class="logo">
+            <img src="../images/owner-removebg-preview.png" alt="Pawfection Palace Logo">
+            <h1>Pat the Dog</h1>
+        </div>
+    </div>
+    <div class="right-bar">
+        <div class="main-wrapper">
+            <form>
+                <legend>Log In</legend>
+                <p class="required-text">Required fields are highlighted with red</p>
+                
+                <div class="input-wrapper">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="whatwhat@gmail.com" required >
+                    <div class="error">Enter a valid email address</div>
+                </div>
+                
+                <div class="input-wrapper">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Strong@123"  required >
+                    <div class="error">Password is required</div>
+                </div>
+                
+                <button type="submit" class="submit-btn">Log In</button>
+                
+                <div class="already-have-account">
+                    Don't have an account? <a href="../signup/signup.html">Sign Up</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script type="module" src="login.js">
+
+    </script>
+</body>
+</html>

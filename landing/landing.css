@@ -1,0 +1,398 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', 'Roboto', Arial, Helvetica, sans-serif;
+}
+
+/*1st section*/
+
+.section1 {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: #6A4C93;
+    color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 8px 0px 8px 100px;
+    align-items: center;
+    border-bottom: 2px solid black;
+    transition: all 0.3s ease-in-out;
+    
+}
+
+nav:hover {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header-logo img {
+    height: 85px;
+    width: 85px;
+    margin-right: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.header-logo img:hover {
+    transform: scale(1.1);
+}
+
+.header-links {
+    display: flex;
+    margin-left: auto;
+    padding: 0px 100px 0px 0px;
+}
+
+.header-links a {
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.header-links a:hover {
+    transform: scale(1.1);
+}
+
+.container-hero {
+    margin-top: -10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 90px;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.hero {
+    flex-basis: 400px;
+    display: flex;
+    flex-direction: column;
+    margin-right: 80px;
+}
+
+.hero h1 {
+    font-family: 'Sour Gummy', sans-serif;
+    font-size: 58px;
+    font-weight: 900;
+    color: black;
+    text-align: left;
+    animation: slideInLeft 1s ease-in-out;
+}
+
+@keyframes slideInLeft {
+    from { transform: translateX(-50px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+.hero p {
+    font-size: 18px;
+    color: black;
+    text-align: left;
+    opacity: 0.7;
+    padding: 10px 10px 10px 0px;
+    text-align: justify;
+    animation: slideInLeft 1s ease-in-out 0.3s both;
+}
+
+.hero button {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    width: 110px;
+    background: #6A4C93;
+    border-radius: 8px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-color: black;
+    transition: all 0.3s ease-in-out;
+    animation: slideInLeft 1s ease-in-out 0.6s both;
+}
+
+.hero button:hover {
+    transform: scale(1.05);
+    background: #8A6CB3;
+}
+
+.hero-image img {
+    height: auto;
+    width: 500px;
+    animation: slideInRight 1s ease-in-out;
+}
+
+@keyframes slideInRight {
+    from { transform: translateX(50px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+/*2nd section*/
+
+.section2 {
+    align-items: center;
+    padding: 30px 0px;
+}
+
+.section2 h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    font-size: 24px;
+    color: black;
+    margin: 20px 0;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+.section2 h2::before,
+.section2 h2::after {
+    content: "";
+    flex: 1;
+    height: 2px;
+    background: black;
+    margin: 0 15px;
+}
+
+.traits-info {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 0 20px;
+}
+
+.traits-info > div {
+    flex: 1 1 calc(25% - 40px);
+    max-width: 300px;
+    text-align: center;
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+    animation-delay: calc(var(--animation-order) * 0.2s);
+}
+
+.traits-info > div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.traits-info img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.traits-info img:hover {
+    transform: scale(1.05);
+}
+
+.traits-info h3 {
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.traits-info p {
+    font-size: 16px;
+    opacity: 0.8;
+    margin-top: 5px;
+    text-align: justify;
+}
+
+/*3rd section*/
+
+.section3 {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.section3 h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    font-size: 24px;
+    color: black;
+    margin: 20px 0;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+.section3 h2::before,
+.section3 h2::after {
+    content: "";
+    flex: 1;
+    height: 2px;
+    background: black;
+    margin: 0 15px;
+}
+
+.container-about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px 90px;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+.about-image {
+    margin-right: 80px;
+    position: relative;
+}
+
+.about-image img {
+    height: auto;
+    width: 300px;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.about-image img:hover {
+    transform: scale(1.05);
+}
+
+.about-image h1 {
+    color: black;
+    font-weight: bold;
+    padding: 0 10px;
+    border-radius: 5px;
+    text-align: center;
+    margin: 0;
+}
+
+.about-text {
+    flex-basis: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+.about-text p {
+    font-size: 20px;
+    color: black;
+    text-align: justify;
+    opacity: 0.8;
+    padding: 10px;
+    animation: slideInRight 1s ease-in-out;
+}
+
+/*4th section*/
+
+.section4 {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.section4 h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    font-size: 24px;
+    color: black;
+    margin: 20px 0;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+.section4 h2::before,
+.section4 h2::after {
+    content: "";
+    flex: 1;
+    height: 2px;
+    background: black;
+    margin: 0 15px;
+}
+
+.container-contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px 90px;
+    margin: 5px 0; 
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+.contact-image {
+    margin-left: 80px;
+    position: relative;
+}
+
+.contact-image img {
+    height: auto;
+    width: 300px;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.contact-image img:hover {
+    transform: scale(1.05);
+}
+
+.contact-text {
+    flex-basis: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-text h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: black;
+    text-align: justify;
+    opacity: 0.8;
+    padding: 10px 0;
+    animation: slideInLeft 1s ease-in-out;
+}
+
+.contact-text ul {
+    font-size: 18px;
+    opacity: 0.8;
+    list-style-type: none;
+    padding: 10px 0;
+}
+
+.contact-text ul li {
+    margin-bottom: 10px;
+    animation: slideInLeft 1s ease-in-out;
+    animation-delay: calc(var(--animation-order) * 0.2s);
+}
+
+@keyframes slideInLeft {
+    from { transform: translateX(-50px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideInRight {
+    from { transform: translateX(50px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
